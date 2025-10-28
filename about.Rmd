@@ -1,0 +1,15 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    
+---
+
+# Hi there!
+
+I'm Eman Ibrahim, currently pursuing my MPH in Epidemiology at Columbia. 
+My interests include global health, humanitarian action, and infectious disease. A big interest of mine that has nothing to do with Public Health is Soccer/Football! 
+
+I'm also very interested in doing research on child malnutrition and food insecurity, hence my thesis. 

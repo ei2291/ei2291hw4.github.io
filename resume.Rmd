@@ -1,0 +1,43 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+   
+---
+
+# Education
+
+- **Columbia University Mailman School of Public Health**, MPH in Epidemiology
+Certificate in Public Health and Humanitarian Action (Sept 2024- May 2026)
+
+- **Virginia Tech**, BS in Biochemistry, Honors Laureate Diploma (Aug 2021-May 2024)
+
+# Experience
+
+ - Research Assistant Intern, Doctors Without Borders (MSF)
+ - Undergraduate Research Assistant, Virginia Tech Dr. Cortes Lab
+ - Vice President, Medicine and Society Club
+ 
+# Skills and Certifications
+## Languages
+- Fluent in Amharic, Tigrigna; conversational German; understanding of verbal/written Arabic
+
+## Certifications
+- CPR & AED, Aug 2025
+
+## Labratory Skills
+- Protein purification, gel electrophoresis, Western blot, ELISA, Spectrophotometry, PCR, Microscopy and imaging techniques, Buffer and reagent preparation
+
+
+
+
+
+
+
+
+
+
+
+

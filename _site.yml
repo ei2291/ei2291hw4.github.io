@@ -1,0 +1,16 @@
+name: "Eman's Website"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Resume"
+      href: resume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<emanibrahim8909@gmail.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/ei2291/
+output:
+  html_document:
+    theme: flatly

@@ -1,0 +1,36 @@
+---
+title: "Welcome!"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+   
+---
+
+# Hello, I'm Eman!
+
+I'm a second year Master of Public Health Student at Columbia University Mailman School of Public Health. I'm in the Epidemiology Department and Public Health and Humanitarian Action Certificate. 
+
+This website shares a little about me and shows some of the work I've done and do. Enjoy!
+
+# Check out my:
+
+- [About me](about.html)
+- [Resume](resume.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
