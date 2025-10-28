@@ -7,9 +7,9 @@ output:
     
 ---
 
-# Examples of plotly.
+# Plots
 
-We're going to see nyc airbnb data.
+We're going to see nyc instacart data.
 
 ```{r}
 library (tidyverse)
@@ -84,16 +84,27 @@ instacart |>
   
 ```
 
-## Bar chart
+## Bar chart: Top 15 Aisles
 
 ```{r}
-
-```
-
-## ggplotly
-
-```{r}
-
+instacart |> 
+  count(aisle, sort=TRUE) |> 
+  slice_max(order_by = n, n=15) |> 
+  mutate(aisle=fct_reorder(aisle, n)) |>
+  plot_ly(
+    x= ~n,
+    y= ~aisle,
+    type = "bar",
+    orientation = "h",
+    color =~aisle,
+    colors = "viridis"
+  ) |> 
+  layout(
+    title = "Top 15 most ordered Aisles",
+    xaxis = list(title= "Number of orders"),
+    yaxis= list(title="Aisles")
+  )
+  
 ```
 
 

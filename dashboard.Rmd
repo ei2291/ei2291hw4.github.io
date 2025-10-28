@@ -17,31 +17,91 @@ library(flexdashboard)
 
 
 ```{r}
+data(instacart)
 
+instacart=
+  instacart |>
+  janitor::clean_names() |> 
+  mutate(
+    order_dow = factor(order_dow, 
+    levels=0:6,
+    labels=c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+    ),
+    order_hour_of_day=as.numeric(order_hour_of_day)
+  ) |> 
+  select(
+    order_id, user_id, order_dow, order_hour_of_day, days_since_prior_order, product_name, aisle, department
+  ) |> 
+  filter(
+    department %in% c("produce", "dairy eggs", "beverages"),
+    !is.na(order_hour_of_day),
+    !is.na(order_dow)
+    )
 
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Chart A - Scatterplot: Order by Hour of day and Department
 
 ```{r}
-
+instacart |> 
+  count(order_hour_of_day, department) |> 
+  plot_ly(
+    x= ~order_hour_of_day,
+    y= ~n,
+    color= ~ department,
+    type = "scatter",
+    mode = "lines+markers"
+  ) |> 
+  layout(
+    title = "Order by Hour of day and Department",
+    xaxis = list(title="Hour of day"),
+    yaxis = list(title="No. of orders")
+  )
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B - Box plot: Order hour by day of week
 
 ```{r}
-
+instacart |> 
+  plot_ly(
+    x=~order_dow,
+    y= ~order_hour_of_day,
+    color = ~order_dow, 
+    type = "box",
+    colors = "viridis"
+  ) |> 
+  layout(
+    title = "Distribution of order time by day of week",
+    xaxis= list(title="Day of week"),
+    yaxis=list (title="Hour of day")
+  )
 ```
 
-### Chart C
+### Chart C - Bar chart: Top 15 Aisles
 
 ```{r}
-
+instacart |> 
+  count(aisle, sort=TRUE) |> 
+  slice_max(order_by = n, n=15) |> 
+  mutate(aisle=fct_reorder(aisle, n)) |>
+  plot_ly(
+    x= ~n,
+    y= ~aisle,
+    type = "bar",
+    orientation = "h",
+    color =~aisle,
+    colors = "viridis"
+  ) |> 
+  layout(
+    title = "Top 15 most ordered Aisles",
+    xaxis = list(title= "Number of orders"),
+    yaxis= list(title="Aisles")
+  )
 ```
 
