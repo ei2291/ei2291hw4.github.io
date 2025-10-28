@@ -13,6 +13,10 @@ I'm a second year Master of Public Health Student at Columbia University Mailman
 
 This website shares a little about me and shows some of the work I've done and do. Enjoy!
 
+# Here is something less serious!
+
+![](spongebob.png)
+
 # Check out my:
 
 - [About me](about.html)
