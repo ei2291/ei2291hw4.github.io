@@ -11,6 +11,8 @@ navbar:
       href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<emanibrahim8909@gmail.com>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/emanibrahim2567/
     - icon: fa-github fa-lg
       href: https://github.com/ei2291/
 output:
